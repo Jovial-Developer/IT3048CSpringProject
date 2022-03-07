@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    //id 'org.jetbrains.kotlin:android' version '1.6.10'
 }
 
 android {
@@ -19,6 +20,10 @@ android {
         }
     }
 
+    buildFeatures {
+        compose true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -35,6 +40,10 @@ android {
         useIR = true
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.1.1'
+        kotlinCompilerVersion '1.5.21'
+    }
 
     packagingOptions {
         resources {
@@ -92,4 +101,14 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.9.2'
     implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    //compose for Android
+    //integration with activities
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    implementation 'androidx.compose.material:material:1.1.1'
+    implementation 'androidx.compose.animation:animation:1.1.1'
+    implementation 'androidx.compose.ui:ui-tooling:1.1.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1'
+
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.1.1'
 }
