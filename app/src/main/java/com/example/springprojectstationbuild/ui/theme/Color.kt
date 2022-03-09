@@ -1,4 +1,4 @@
-package ui.theme
+package com.example.springprojectstationbuild.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
