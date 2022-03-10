@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-  //          viewModel.fetchComputerComponents()
+            viewModel.fetchComputerComponents()
             val components by viewModel.components.observeAsState(initial = emptyList())
             R.layout.settings_activity
 
