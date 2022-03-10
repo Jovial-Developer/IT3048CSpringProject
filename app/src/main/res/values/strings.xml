@@ -17,4 +17,16 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="motherboard">MotherBoard</string>
+    <string name="heat_sink_fan">Heat Sink Fan</string>
+    <string name="processor">Processor</string>
+    <string name="memory">Memory</string>
+    <string name="watercooling">Watercooling</string>
+    <string name="submit">Submit</string>
+    <string name="my_pc_blue_angel">My PC Blue Angel</string>
+    <string name="power_supply">Power Supply</string>
+    <string name="graphics_card">Graphics Card</string>
+    <string name="wires">Wires</string>
+    <string name="the_case">the Case</string>
+    <string name="storage">Storage</string>
 </resources>
