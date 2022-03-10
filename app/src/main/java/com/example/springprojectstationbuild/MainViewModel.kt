@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
         var componentService : ComponentService = ComponentService()
 
 
-        fun fetchComponents() {
+        fun fetchComputerComponents() {
             viewModelScope.launch{
                 var innerComponents = componentService.fetchComputerComponents()
                 components.postValue(innerComponents)
