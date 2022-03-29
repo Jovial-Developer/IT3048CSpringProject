@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.CheckBox
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
-
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class SettingsActivity : AppCompatActivity() {
@@ -14,10 +14,10 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.settings_activity)
         setContentView(R.layout.activity_main);
         // Finding CheckBox by its unique ID
-        checkboxCPU = (CheckBox) findViewById (R.id.cbCPU);
-        checkboxpower=(CheckBox)findViewById(R.id.cbpowersource);
-        checkboxWIFI=(CheckBox)findViewById(R.id.cbwificard);
-        checkboxRAM=(CheckBox)findViewById(R.id.cbRAM);
+        var checkboxCPU = (CheckBox()) findViewById (R.id.cbCPU);
+        var checkboxpower = (CheckBox) findViewById (R.id.cbpowersource);
+        var checkboxWIFI = (CheckBox) findViewById (R.id.cbwificard);
+        var checkboxRAM=(CheckBox)findViewById(R.id.cbRAM);
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()

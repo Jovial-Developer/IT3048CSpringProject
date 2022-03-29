@@ -9,7 +9,7 @@
     <CheckBox
         android:id="@+id/cbCPU"
         android:layout_width="86dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:text="CPU"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
     <CheckBox
         android:id="@+id/cbwificard"
         android:layout_width="126dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:text="WIFI"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,5 +92,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/cbmotherboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motherboards"
+        app:layout_constraintBottom_toTopOf="@+id/cbwatercooling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toEndOf="@+id/cbCPU"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958" />
+
+    <CheckBox
+        android:id="@+id/cbwatercooling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watercooling"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toEndOf="@+id/cbpowersource"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <CheckBox
+        android:id="@+id/cbfans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cooling Fans"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toEndOf="@+id/cbwificard"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <CheckBox
+        android:id="@+id/cbkeyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keyboard's"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintStart_toEndOf="@+id/cbRAM"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
