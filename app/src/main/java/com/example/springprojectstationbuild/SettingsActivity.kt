@@ -14,7 +14,7 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.settings_activity)
         setContentView(R.layout.activity_main);
         // Finding CheckBox by its unique ID
-        var checkboxCPU = (CheckBox()) findViewById (R.id.cbCPU);
+        var checkboxCPU = (CheckBox) findViewById (R.id.cbCPU);
         var checkboxpower = (CheckBox) findViewById (R.id.cbpowersource);
         var checkboxWIFI = (CheckBox) findViewById (R.id.cbwificard);
         var checkboxRAM=(CheckBox)findViewById(R.id.cbRAM);
@@ -39,6 +39,7 @@ class SettingsActivity : AppCompatActivity() {
 
         }
     }
+
 
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
