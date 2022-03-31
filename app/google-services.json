@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "19323596690",
+    "project_id": "computerparts-7bb78",
+    "storage_bucket": "computerparts-7bb78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19323596690:android:e6cfec9587f3381b181b4b",
+        "android_client_info": {
+          "package_name": "com.example.springprojectstationbuild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19323596690-15ptav6a40aqqao19kd9bnfa6p2opde4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMZt9qPsxODuVxi-qxJxIFux9Uh-AjZ9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19323596690-15ptav6a40aqqao19kd9bnfa6p2opde4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
