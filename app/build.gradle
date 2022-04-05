@@ -71,6 +71,7 @@ dependencies {
     //retrofit and live data
     implementation 'com.squareup.retrofit2:retrofit2:2.7.1'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
     //implementation "androidx.compose.runtime:runtime-livedata: $compose_version"
 
     //android test implementations
