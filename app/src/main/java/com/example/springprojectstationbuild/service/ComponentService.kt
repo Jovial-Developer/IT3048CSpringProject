@@ -17,10 +17,9 @@ class ComponentService : IComponentService {
         return withContext(Dispatchers.IO){
             val service = RetrofitClientInstance.retrofitInstance?.create(IComponentDAO::class.java)
             val response = service!!.getAllComponents().awaitResponse()
-            if (response.isSuccessful)
-            {
+            if (response.isSuccessful) {
                 return@withContext response.body()
-            }else{
+            } else {
                 throw Exception("Failed to get components. Server Response: ${response.code()}")
             }
         }
