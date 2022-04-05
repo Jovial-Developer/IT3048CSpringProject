@@ -11,6 +11,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.material.*
 
+
+
 class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel by viewModel<MainViewModel>()
@@ -20,40 +22,41 @@ class MainActivity : AppCompatActivity() {
         setContent {
             viewModel.fetchComputerComponents()
             R.layout.settings_activity
-            Surface{
+            Surface {
                 mainButtons("Android")
             }
         }
     }
-}
-@Composable
-fun mainButtons(name: String) {
 
-    val context = LocalContext.current
-    val text = "You clicked this button"
-    val duration = Toast.LENGTH_LONG
+    @Composable
+    fun mainButtons(name: String) {
 
-    Column {
+        val context = LocalContext.current
+        val text = "You clicked this button"
+        val duration = Toast.LENGTH_LONG
 
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Select Existing PC") }
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Add a new PC") }
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Login to My Account") }
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Create Account") }
+        Column {
+
+            Button(
+                onClick = {
+                    Toast.makeText(context, text, duration).show()
+                }
+            ) { Text(text = "Select Existing PC") }
+            Button(
+                onClick = {
+                    Toast.makeText(context, text, duration).show()
+                }
+            ) { Text(text = "Add a new PC") }
+            Button(
+                onClick = {
+                    Toast.makeText(context, text, duration).show()
+                }
+            ) { Text(text = "Login to My Account") }
+            Button(
+                onClick = {
+                    Toast.makeText(context, text, duration).show()
+                }
+            ) { Text(text = "Create Account") }
+        }
     }
 }
