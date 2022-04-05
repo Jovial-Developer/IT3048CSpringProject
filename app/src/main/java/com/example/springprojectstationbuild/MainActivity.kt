@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             viewModel.fetchComputerComponents()
-            //val components by viewModel.components.observeAsState(initial = emptyList())
             R.layout.settings_activity
 
         }
