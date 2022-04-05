@@ -26,11 +26,10 @@ class SettingsActivity : AppCompatActivity() {
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-        btnSearch.setOnClickListener
+        btnSearch.setOnClickListener()
         {
-            val checkboxCPU = cbCPU.isChecked
-            val checkboxWIFI = cbwificard.isChecked
+            //checkboxCPU = cbCPU.isChecked
+            //val checkboxWIFI = cbwificard.isChecked
             if (checkboxCPU.isChecked)
             {
                 //code to go to next page
