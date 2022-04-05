@@ -8,7 +8,7 @@ import androidx.compose.material.Button
 import androidx.compose.material.Text
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.compose.runtime.*
-import androidx.compose.runtime.livedata.observeAsState
+//import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.platform.LocalContext
 
 
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             viewModel.fetchComputerComponents()
-            val components by viewModel.components.observeAsState(initial = emptyList())
+            //val components by viewModel.components.observeAsState(initial = emptyList())
             R.layout.settings_activity
 
         }
