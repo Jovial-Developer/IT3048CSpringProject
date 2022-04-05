@@ -2,6 +2,7 @@ package com.example.springprojectstationbuild
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.springprojectstationbuild.service.ComponentService
+import com.example.springprojectstationbuild.service.ComponentServiceStub
 import com.example.springprojectstationbuild.dto.ComputerComponent
 import kotlinx.coroutines.test.runTest
 
@@ -21,8 +22,10 @@ class ExampleUnitTest {
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
 
-    lateinit var componentService : ComponentService
-    var allComponents : List<ComputerComponent>? = ArrayList<ComputerComponent>()
+    lateinit var componentService : ComponentServiceStub
+    //Stub until we configure Firebase
+    //var allComponents : List<ComputerComponent>? = ArrayList<ComputerComponent>()
+    var allComponents : Set<ComputerComponent>? = HashSet<ComputerComponent>()
 
     @Test
     fun addition_isCorrect() {
@@ -38,11 +41,11 @@ class ExampleUnitTest {
 
 
     private fun givenComponentServiceIsInitialized(){
-        componentService = ComponentService()
+        componentService = ComponentServiceStub()
     }
 
-    private suspend fun whenComponentDataAreReadAndParsed() {
-        allComponents = componentService.fetchComputerComponents()
+    private fun whenComponentDataAreReadAndParsed() {
+        allComponents = componentService.fetchComputerComponent()
     }
 
     private fun thenTheComponentCollectionIsNotEmpty() {
