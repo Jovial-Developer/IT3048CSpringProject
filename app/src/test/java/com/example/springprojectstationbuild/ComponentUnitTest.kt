@@ -16,7 +16,7 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class ComponentUnitTest {
 
     @get:Rule
     var rule: TestRule = InstantTaskExecutorRule()
@@ -36,6 +36,11 @@ class ExampleUnitTest {
         thenTheComponentCollectionIsNotEmpty()
     }
 
+    fun `Given a computer component DTO when name is Processor and price is $150`(){
+        val computer = ComputerComponent("Processor", "$150")
+        assertTrue(computer.name.equals("Processor"))
+        assertTrue(computer.price.equals("$150"))
+    }
 
     private fun givenComponentServiceIsInitialized(){
         componentService = ComponentService()
