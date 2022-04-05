@@ -12,8 +12,8 @@ data class ComputerComponent(
     @SerializedName("Hide") var hide: Boolean,
     @SerializedName("AddToCart") var addtocart: Boolean
 
-    ){
-    private var component = name + " " + id + " " + index + " " + price + " " + brand + " " + model + " " + hide + " " + addtocart
+){
+    private var component = "$name, $id, $index, $price, $brand, $model, $hide, $addtocart"
     override fun toString(): String {
         return component
     }

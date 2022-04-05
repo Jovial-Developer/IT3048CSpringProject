@@ -16,11 +16,12 @@ class ComponentService : IComponentService {
     override suspend fun fetchComputerComponents(): List<ComputerComponent>? {
         return withContext(Dispatchers.IO){
             val service = RetrofitClientInstance.retrofitInstance?.create(IComponentDAO::class.java)
-            val components = async {service?.getAllComponents()}
-            var result = components.await()?.awaitResponse()?.body()
-            return@withContext result
+            val response = service!!.getAllComponents().awaitResponse()
+            if (response.isSuccessful) {
+                return@withContext response.body()
+            } else {
+                throw Exception("Failed to get components. Server Response: ${response.code()}")
+            }
         }
     }
 }
-
-
