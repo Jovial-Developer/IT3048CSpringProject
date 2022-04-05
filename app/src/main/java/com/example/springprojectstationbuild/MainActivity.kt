@@ -8,10 +8,8 @@ import androidx.compose.material.Button
 import androidx.compose.material.Text
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.compose.runtime.*
-//import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.platform.LocalContext
-
-
+import androidx.compose.material.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,12 +20,14 @@ class MainActivity : AppCompatActivity() {
         setContent {
             viewModel.fetchComputerComponents()
             R.layout.settings_activity
-
+            Surface{
+                mainButtons("Android")
+            }
         }
     }
 }
 @Composable
-fun mainButtons() {
+fun mainButtons(name: String) {
 
     val context = LocalContext.current
     val text = "You clicked this button"
