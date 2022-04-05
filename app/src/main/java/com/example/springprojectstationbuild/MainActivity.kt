@@ -50,6 +50,11 @@ fun mainButtons() {
             onClick = {
                 Toast.makeText(context, text, duration).show()
             }
+        ) { Text(text = "Select price estimation") }
+        Button(
+            onClick = {
+                Toast.makeText(context, text, duration).show()
+            }
         ) { Text(text = "Login to My Account") }
         Button(
             onClick = {
