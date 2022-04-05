@@ -6,6 +6,7 @@ import com.example.springprojectstationbuild.dto.ComputerComponent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.Dispatchers
 import retrofit2.awaitResponse
 
 interface IComponentService {
