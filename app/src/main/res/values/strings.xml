@@ -2,7 +2,13 @@
     <string name="app_name">SpringProjectStationBuild</string>
     <!-- Settings Activity Title -->
     <string name="title_activity_settings">SettingsActivity</string>
-
+    <string name="Heading">CheckBox-Check</string>
+    <string name="checkBox1_text">GPU</string>
+    <string name="checkBox2_text">CPU</string>
+    <string name="checkBox3_text">Cooling Fans</string>
+    <string name="checkBox4_text">Mouse</string>
+    <string name="checkBox5_text">Keyboard</string>
+    <string name="submitButton">NEXT</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
