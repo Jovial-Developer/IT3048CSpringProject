@@ -9,6 +9,14 @@
     <string name="checkBox4_text">Mouse</string>
     <string name="checkBox5_text">Keyboard</string>
     <string name="submitButton">NEXT</string>
+
+    <!-- Login Activity  -->
+
+    <string name="login_form_title">Login</string>
+    <string name="login_form_username">Username</string>
+    <string name="login_form_password">Password</string>
+    <string name="login_form_login">LOGIN</string>
+
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
