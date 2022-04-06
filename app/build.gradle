@@ -67,6 +67,8 @@ dependencies {
     //implementation 'org.GradlePlugins.ANDROID'
     //implementation 'org.GradlePlugins.VERSIONS'
 
+    implementation("androidx.cardview:cardview:1.0.0")
+
     //lifecycle implementation
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
     implementation 'androidx.activity:activity-compose:1.4.0'
