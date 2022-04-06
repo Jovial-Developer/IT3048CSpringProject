@@ -18,17 +18,17 @@ class LoginActivity : AppCompatActivity() {
         // get reference to all views
         var userName = findViewById(R.id.userName) as EditText
         var password = findViewById(R.id.password) as EditText
-        var btn_reset = findViewById(R.id.btnReset) as Button
-        var btn_submit = findViewById(R.id.btnSubmit) as Button
+        var btnReset = findViewById(R.id.btnReset) as Button
+        var btnSubmit = findViewById(R.id.btnSubmit) as Button
 
-        btn_reset.setOnClickListener {
+        btnReset.setOnClickListener {
             // clearing user_name and password edit text views on reset button click
             userName.setText("")
             password.setText("")
         }
 
         // set on-click listener
-        btn_submit.setOnClickListener {
+        btnSubmit.setOnClickListener {
             val user_name = userName.text;
             val password = password.text;
             Toast.makeText(this@LoginActivity, user_name, Toast.LENGTH_LONG).show()
