@@ -1,19 +1,22 @@
 package com.example.springprojectstationbuild
+
+//import androidx.compose.runtime.livedata.observeAsState
 import android.os.Bundle
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Button
-import androidx.compose.material.Text
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import androidx.compose.runtime.*
-//import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.ui.platform.LocalContext
-
 
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var CPU: CheckBox
+    lateinit var wifi: CheckBox
+    lateinit var RAM: CheckBox
+    lateinit var Power: CheckBox
+    lateinit var Search: Button
 
     private val viewModel: MainViewModel by viewModel<MainViewModel>()
 
@@ -22,39 +25,35 @@ class MainActivity : AppCompatActivity() {
         setContent {
             viewModel.fetchComputerComponents()
             //val components by viewModel.components.observeAsState(initial = emptyList())
-            R.layout.settings_activity
+            R.layout.activity_main
+
+
+            Search = findViewById(R.id.btnSearch)
+            CPU = findViewById(R.id.cbCPU)
+            Power = findViewById(R.id.cbpowersource)
+            wifi = findViewById(R.id.cbwificard)
+            RAM = findViewById(R.id.cbRAM)
+
+            Search.setOnClickListener {
+                val result = StringBuilder()
+                result.append("selected Items")
+
+                if (CPU.isChecked) {
+                    result.append("testing checked works:CPU\n")
+                }
+                if (Power.isChecked) {
+                    result.append("testing checked works:Power\n")
+                }
+                if (wifi.isChecked) {
+                    result.append("testing checked works:wifi\n")
+                }
+                if (RAM.isChecked) {
+                    result.append("testing checked works:RAM\n")
+                }
+                result.append("testing checked works:nothing\n")
+                Toast.makeText(applicationContext, result.toString(), Toast.LENGTH_LONG).show()}
 
         }
     }
 }
-@Composable
-fun mainButtons() {
 
-    val context = LocalContext.current
-    val text = "You clicked this button"
-    val duration = Toast.LENGTH_LONG
-
-    Column {
-
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Select Existing PC") }
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Add a new PC") }
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Login to My Account") }
-        Button(
-            onClick = {
-                Toast.makeText(context, text, duration).show()
-            }
-        ) { Text(text = "Create Account") }
-    }
-}

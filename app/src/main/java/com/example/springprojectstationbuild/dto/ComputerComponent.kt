@@ -3,7 +3,7 @@ package com.example.springprojectstationbuild.dto
 import com.google.gson.annotations.SerializedName
 
 data class ComputerComponent(
-    @SerializedName("ID") val id : String,
+    @SerializedName("ID") var id : String,
     @SerializedName("index") var index : Int,
     @SerializedName("Price") var price : Double,
     @SerializedName("Name") var name: String,
