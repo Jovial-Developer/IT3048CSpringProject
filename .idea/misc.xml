@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/davis/.gradle/caches/transforms-3/f760c1dcd73f22dfaf4435afb634a095/transformed/preference-v7-25.3.0/res/layout/preference_widget_seekbar.xml" value="0.1" />
+        <entry key="..\:/Users/davis/AndroidStudioProjects/IT3048CSpringProject/app/src/main/res/layout/settings_activity.xml" value="0.22010869565217392" />
         <entry key="..\:/Users/sammy/AndroidStudioProjects/IT3048CSpringProject/app/src/main/res/layout/activity_main.xml" value="0.2" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
