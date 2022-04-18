@@ -33,16 +33,6 @@ A mobile application that lets you search for computer parts to build your own P
 ## Class Diagram
 ![Project-Diagram](Class-Diagram.png)
 
-### Class Diagram Description
-**MainActivity:** 
-
-**ViewModel:** 
-
-**RetrofitClientInstance:** Bootstrap class require for Retrofit
-
-**DAO:** Json data
-
-**DAO1:** 
 
 ## Scrum Roles
 
