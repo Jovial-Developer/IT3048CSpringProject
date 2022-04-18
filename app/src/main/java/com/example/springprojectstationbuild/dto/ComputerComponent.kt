@@ -3,7 +3,7 @@ package com.example.springprojectstationbuild.dto
 import com.google.gson.annotations.SerializedName
 
 data class ComputerComponent(
-    @SerializedName("ID") var id : String,
+    @SerializedName("ID") var PartsID : String,
     @SerializedName("index") var index : Int,
     @SerializedName("Price") var price : Double,
     @SerializedName("Name") var name: String,
@@ -13,7 +13,7 @@ data class ComputerComponent(
     @SerializedName("AddToCart") var addtocart: Boolean
 
     ){
-    private var component = name + " " + id + " " + index + " " + price + " " + brand + " " + model + " " + hide + " " + addtocart
+    private var component = name + " " + PartsID + " " + index + " " + price + " " + brand + " " + model + " " + hide + " " + addtocart
     override fun toString(): String {
         return component
     }
