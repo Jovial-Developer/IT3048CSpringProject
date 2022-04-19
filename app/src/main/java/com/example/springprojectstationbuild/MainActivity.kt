@@ -9,9 +9,20 @@ import android.widget.CheckBox
 import android.widget.Toast
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Button
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.example.springprojectstationbuild.dto.AddtoCart
+import com.example.springprojectstationbuild.dto.User
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -19,13 +30,12 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 class MainActivity : AppCompatActivity() {
 
     //var ComputerComponent = newComputerComponent()
 
     private var strUri by mutableStateOf("")
-    private var uri: Uri?= null
+    private var uri: Uri? = null
     lateinit var CPU: CheckBox
     lateinit var wifi: CheckBox
     lateinit var RAM: CheckBox
@@ -39,12 +49,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             viewModel.fetchComputerComponents()
-            /*firebaseUser?.let {
+            firebaseUser?.let {
                 val user = User(it.uid, "")
                 viewModel.user = user
                 viewModel.listenToParts()
             }
-*/
+
             //val components by viewModel.components.observeAsState(initial = emptyList())
             R.layout.activity_main
 
@@ -78,19 +88,33 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-  /*  @Composable
-    private fun Events () {
-        val photos by viewModel.eventPhotos.observeAsState(initial = emptyList())
-        LazyColumn(contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp), modifier = Modifier.fillMaxHeight()) {
-            items (
-                items = photos,
-                itemContent = {
-                    EventListItem(photo = it)
+    //cards
+    @Composable
+    fun EventListItem(photo : AddtoCart) {
+        var inDescription by remember(photo.id) {mutableStateOf(photo.description)}
+        Row {
+            Column(Modifier.weight(2f)) {
+            }
+            Column(Modifier.weight(4f)) {
+                Text(text= photo.id, style= MaterialTheme.typography.h6)
+                Text(photo.dateTaken.toString(), style= MaterialTheme.typography.caption)
+            }
+            Column(Modifier.weight(1f)) {
+                Button (
+                    onClick = {
+                        photo.description = inDescription
+                        viewModel.updateCart(photo)
+                    }
+                ) {
+                    Icon(
+                        imageVector = Icons.Filled.Check,
+                        contentDescription = "Save",
+                        modifier = Modifier.padding(end = 8.dp)
+                    )
                 }
-            )
+            }
         }
-    }*/
-
+    }
     private fun signIn() {
         val providers = arrayListOf(
             AuthUI.IdpConfig.EmailBuilder().build(),
